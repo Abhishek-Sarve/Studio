@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Portfolio | AK x Hitesh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --text-color: #e0e0e0;
+            --accent-color: #d4af37;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: var(--font-sans); 
+            color: var(--text-color); 
+            background-color: var(--bg-color); 
+            line-height: 1.6; 
+            -webkit-font-smoothing: antialiased;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { width: 100%; display: block; }
+        
+        /* Navigation */
+        nav { padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; position: sticky; top:0; background: #0f0f0f; z-index: 100; }
+        .logo { font-family: var(--font-serif); font-size: 1.5rem; color: #fff; }
+        .back-link { color: var(--accent-color); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; border: 1px solid var(--accent-color); padding: 8px 16px; transition: 0.3s; }
+        .back-link:hover { background: var(--accent-color); color: #000; }
+        
+        /* Header */
+        .full-header { padding: 60px 5% 40px 5%; text-align: center; }
+        .full-header h1 { font-family: var(--font-serif); font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
+        .full-header p { color: #888; font-size: 0.9rem; }
+        
+        /* DYNAMIC PINTEREST LAYOUT */
+        .portfolio-full-grid {
+            padding: 0 5% 80px 5%;
+            
+            /* --- CRITICAL FIX: Dynamic Columns --- */
+            /* Instead of fixed 'column-count: 4', we use column-width */
+            column-width: 280px; 
+            column-gap: 20px;
+        }
+        
+        .masonry-item-full {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+
+        .masonry-item-full:hover { transform: translateY(-5px); }
+
+        .masonry-item-full img {
+            filter: grayscale(100%);
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .masonry-item-full:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
+
+        .item-overlay {
+            position: absolute; inset: 0;
+            padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            opacity: 0; transition: opacity 0.3s;
+            display: flex; flex-direction: column; justify-content: flex-end;
+        }
+        .masonry-item-full:hover .item-overlay { opacity: 1; }
+        .item-title { color: #fff; font-family: var(--font-serif); font-size: 1.1rem; }
+        .item-cat { color: var(--accent-color); font-size: 0.8rem; text-transform: uppercase; margin-top: 5px; }
+
+        /* Footer (Consistent with Index) */
+        footer { background-color: #050505; color: #fff; padding: 50px 5%; border-top: 1px solid #222; text-align: center; }
+        .footer-content { margin-bottom: 20px; }
+        .footer-logo { font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 20px; color: #fff; }
+        .social-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        .social-item {
+            color: #fff; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;
+            padding: 8px 20px; border: 1px solid #333; transition: all 0.3s ease;
+        }
+        .social-item:hover { border-color: var(--accent-color); color: var(--accent-color); background: rgba(212, 175, 55, 0.05); }
+
+        /* Responsive Logic Handled by 'column-width' automatically. 
+           No media queries needed for columns, just font sizes. */
+        @media (max-width: 768px) { 
+            .full-header h1 { font-size: 1.8rem; }
+            nav { padding: 15px 20px; }
+            .back-link { padding: 6px 12px; font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AK x Studio</div>
+        <a href="/final.html" class="back-link">Back to Home</a>
+    </nav>
+
+    <div class="full-header">
+        <h1>Complete Collection</h1>
+        <p>A curated exploration of visual storytelling.</p>
+    </div>
+
+    <!-- Dynamic Masonry Grid -->
+    <div class="portfolio-full-grid">
+        <!-- Item 1 -->
+        <div class="masonry-item-full">
+            <img src="1.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Mountain Serenity</div><span class="item-cat">Landscape</span></div>
+        </div>
+        <!-- Item 2 -->
+        <div class="masonry-item-full">
+            <img src="2.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Studio Portrait</div><span class="item-cat">Portrait</span></div>
+        </div>
+        <!-- Item 3 -->
+        <div class="masonry-item-full">
+            <img src="3.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Liquid Dreams</div><span class="item-cat">Abstract</span></div>
+        </div>
+        <!-- Item 4 -->
+        <div class="masonry-item-full">
+            <img src="4.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">City Lights</div><span class="item-cat">Urban</span></div>
+        </div>
+        <!-- Item 5 -->
+        <div class="masonry-item-full">
+            <img src="5.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Forest Path</div><span class="item-cat">Nature</span></div>
+        </div>
+        <!-- Item 6 -->
+        <div class="masonry-item-full">
+            <img src="6.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Editorial</div><span class="item-cat">Fashion</span></div>
+        </div>
+        <!-- Item 7 -->
+        <div class="masonry-item-full">
+            <img src="7.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Minimalist</div><span class="item-cat">Art</span></div>
+        </div>
+        <!-- Item 8 -->
+        <div class="masonry-item-full">
+            <img src="8.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Horizon</div><span class="item-cat">Sky</span></div>
+        </div>
+        <!-- Item 9 -->
+        <div class="masonry-item-full">
+            <img src="9.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Desert Dunes</div><span class="item-cat">Travel</span></div>
+        </div>
+         <!-- Item 10 -->
+         <div class="masonry-item-full">
+            <img src="10.jpg" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 11 -->
+         <div class="masonry-item-full">
+            <img src="11.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 12 -->
+         <div class="masonry-item-full">
+            <img src="12.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 13 -->
+         <div class="masonry-item-full">
+            <img src="13.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 14 -->
+         <div class="masonry-item-full">
+            <img src="14.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 15 -->
+         <div class="masonry-item-full">
+            <img src="1.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 16 -->
+         <div class="masonry-item-full">
+            <img src="2.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 17 -->
+         <div class="masonry-item-full">
+            <img src="3.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 18 -->
+         <div class="masonry-item-full">
+            <img src="4.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 19 -->
+         <div class="masonry-item-full">
+            <img src="5.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 20 -->
+         <div class="masonry-item-full">
+            <img src="6.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+        <!-- Item 21 -->
+         <div class="masonry-item-full">
+            <img src="7.webp" alt="Work">
+            <div class="item-overlay"><div class="item-title">Neon Nights</div><span class="item-cat">Nightlife</span></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">AK Photography</div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/ak_photography_studio45?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-item">Instagram</a>
+                <a href="https://www.facebook.com/hitesh.janbandhu.56?utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="social-item">Facebook</a>
+                <a href="#" class="social-item">Email</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

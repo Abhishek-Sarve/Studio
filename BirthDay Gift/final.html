@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK x Photography</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader"><div class="preloader-text">AK PHOTOGRAPHY STUDIO</div></div>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="logo">Ak x Studio</div>
+        
+        <div class="mobile-menu-btn" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <div class="nav-desktop">
+            <a href="Portfolio/collection.html" target="_self">Full Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+                <span id="theme-icon">☾</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- GLASSMORPHISM MOBILE MENU OVERLAY -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <a href="Portfolio/collection.html" class="mobile-link" onclick="toggleMenu()">Portfolio</a>
+        <a href="#about" class="mobile-link" onclick="toggleMenu()">About</a>
+        <a href="#services" class="mobile-link" onclick="toggleMenu()">Services</a>
+        <a href="#contact" class="mobile-link" onclick="toggleMenu()">Contact</a>
+        <button class="mobile-link theme-toggle" onclick="toggleTheme()" style="border:none; background:none; font-size:1.5rem; margin-top:20px;">
+            <span id="theme-icon-mobile">☾</span>
+        </button>
+        <a href="javascript:void(0)" class="mobile-link" onclick="toggleMenu()" style="color:var(--accent-color); font-size: 1.2rem; margin-top:10px;">Close</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="slide active">
+            <img src="Asset/1 Hero.avif" alt="Portrait">
+            <div class="hero-content">
+                <div class="hero-subtitle">Capturing Soul</div>
+                <div class="hero-title">The Art of<br>Observation</div>
+                <a href="Portfolio/collection.html" class="btn-outline" >View Portfolio</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="Asset/2 Hero.avif" alt="Architecture">
+            <div class="hero-content">
+                <div class="hero-subtitle">Urban Stories</div>
+                <div class="hero-title">Light & Shadow</div>
+                <a href="Portfolio/collection.html" class="btn-outline" >Explore Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION (UPDATED) -->
+    <section id="about" class="about-section">
+        <!-- Added class="reveal-left" for slide animation -->
+        <div class="about-image reveal-left">
+            <img src="Asset/about.jpg" alt="Photographer">
+        </div>
+        <div class="about-content reveal">
+            <span class="section-subtitle">Behind Lens</span>
+            <h2 class="about-title">Visual Storyteller<br>& Creative Director</h2>
+            <p class="about-text">Based in New York City, I specialize in capturing raw emotion and hidden beauty in everyday moments.</p>
+            <!-- <div class="stats">
+                <div class="stat-item"><h3>10+</h3><p>Years Experience</p></div>
+                <div class="stat-item"><h3>500+</h3><p>Projects Done</p></div>
+                <div class="stat-item"><h3>15</h3><p>Awards Won</p></div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- SELECTED WORKS (MARQUEE ONLY) -->
+    <section id="selected-works" class="portfolio-section">
+        <div class="portfolio-header reveal">
+            <h2 class="portfolio-title">Selected Works</h2>
+            <div style="width: 50px; height: 1px; background: var(--accent-color); margin: 20px auto;"></div>
+        </div>
+        <!-- ROW 1 -->
+        <div class="marquee-row row-1">
+            <div class="marquee-track">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2072&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2053&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1551085254-e96b210db58a?q=80&w=2070&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop" alt="Work">
+                <!-- Duplicate -->
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2072&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2053&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1551085254-e96b210db58a?q=80&w=2070&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop" alt="Work">
+            </div>
+        </div>
+        <!-- ROW 2 -->
+        <div class="marquee-row row-2">
+            <div class="marquee-track">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=2070&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1682687221038-404670f01d03?q=80&w=1974&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=2074&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074&auto=format&fit=crop" alt="Work">
+                <!-- Duplicate -->
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=2070&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1682687221038-404670f01d03?q=80&w=1974&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=2074&auto=format&fit=crop" alt="Work">
+                <img class="marquee-img" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074&auto=format&fit=crop" alt="Work">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+        <div class="services-header reveal">
+            <span class="section-subtitle">What I Do</span>
+            <h2>Services</h2>
+            <div style="width: 50px; height: 1px; background: var(--accent-color); margin: 20px auto;"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon">I.</div>
+                <h3>Portrait & Lifestyle</h3>
+                <p>Personal branding, senior portraits, and lifestyle shoots that capture your true personality.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">II.</div>
+                <h3>Commercial & Branding</h3>
+                <p>High-end product photography and corporate imagery designed to elevate your brand.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">III.</div>
+                <h3>Events & Weddings</h3>
+                <p>Candid, documentary-style coverage of your most important moments.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">IV.</div>
+                <h3>Art Direction</h3>
+                <p>Full creative direction for campaigns, including mood boarding and supervision.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="contact-overlay"></div>
+        <div class="contact-container reveal">
+            <h2 class="contact-title">Let's Create Together</h2>
+            <p style="color:#ccc; margin-bottom:40px;">Tell me about your project.</p>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent!');">
+                <div class="form-group"><input type="text" class="form-input" placeholder="Your Name" required></div>
+                <div class="form-group"><input type="email" class="form-input" placeholder="Your Email" required></div>
+                <div class="form-group"><textarea class="form-input" rows="1" placeholder="Your Message" style="resize: none;"></textarea></div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">AK Photography Studio</div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/ak_photography_studio45?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-item" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/hitesh.janbandhu.56?utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="social-item" target="_blank">Facebook</a>
+                <a href="#" class="social-item">WhatsApp</a>
+                <a href="#" class="social-item">Email</a>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2026 AK Photography Studio.</div>
+    </footer>
+
+    <!-- JAVASCRIPT LINK -->
+    <script src="script.js"></script>
+</body>
+</html>
